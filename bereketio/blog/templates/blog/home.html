@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    {% for post in posts %}
+        <div class="post-container">
+            <span class="author">
+                <img src="{{ post.author.profile.image.url }}" alt="profile" class="profile">
+                <p class="author-name">{{post.author}}</p>
+                <p class="post-date">· {{post.date_posted}}</p>
+            </span>
+
+            <div class="post-content">
+                <h2 ><a href="{% url 'blog-post' post.id %}" class="post-title">{{ post.title }}</a></h2>
+                <p class="post-paragraph">{{post.content}}</p>
+            </div>
+        </div>
+    {% endfor  %}
+        
+    
+    
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'users/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        <span class="profile-back">
+            <p class="profile-back-text"> bereketio </p>
+        </span>
+
+        <div class="profile-info">
+            <img src="{% static 'assets/bereketio.HEIC' %}" alt="profile-image" width="150" class="profile-image">
+
+            <div class="info-container">
+                <span class="user-name">
+                    <p>My name: Yergali Bereket</p>
+                </span>
+
+                <span class="user-email">
+                    <p>Email: b_yergali@kbtu.kz</p>
+                </span>
+
+                <span>
+                    <p>My ID: 22B030344</p>
+                </span>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

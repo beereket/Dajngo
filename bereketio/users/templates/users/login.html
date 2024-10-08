@@ -1,0 +1,51 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+{% block content %}
+<!--    <form action="" class="register-form" method="post">-->
+<!--        {% csrf_token %}-->
+<!--        <fieldset class="form-group">-->
+<!--            <legend class="border-bottom">Join Today</legend>-->
+<!--            {{form}}-->
+<!--        </fieldset>-->
+<!--        <div class="form-group">-->
+<!--            <button class="register-button" type="submit">Sign Up</button>-->
+<!--        </div>-->
+<!--    </form>-->
+
+<!--    <div class="border-top">-->
+<!--        <small class="text-muted">Already have an account? <a href="">Login</a></small>-->
+<!--    </div>-->
+
+
+<div class="main">
+    <div class="login-intro">
+        <p class="intro-title">bereketio</p>
+
+        <p class="intro-paragraph">At MiniBlog, we believe that sharing stories, experiences, and knowledge can inspire
+            others to grow, learn, and connect.</p>
+
+        <span class="contact-section">
+            <p class="intro-contact">Yergali Bereket</p>
+            <p class="intro-contact">Student, KBTU</p>
+        </span>
+    </div>
+
+    <div class="login-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Welcome back</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Log In</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">Do you need an account? <a href="{% url 'users-register' %}">Register Now</a></small>
+        </div>
+    </div>
+</div>
+{% endblock %}

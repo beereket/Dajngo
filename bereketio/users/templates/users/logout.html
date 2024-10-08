@@ -1,0 +1,33 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+{% block content %}
+
+    <div class="main">
+    <div class="logout-intro">
+        <p class="intro-title">bereketio</p>
+
+        <p class="intro-paragraph">At MiniBlog, we believe that sharing stories, experiences, and knowledge can inspire
+            others to grow, learn, and connect.</p>
+
+        <span class="contact-section">
+            <p class="intro-contact">Yergali Bereket</p>
+            <p class="intro-contact">Student, KBTU</p>
+        </span>
+    </div>
+
+    <div class="login-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Hello</legend>
+                <h4>You just logged out</h4>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit"><a href="{% url 'users-login' %}">Login Again</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

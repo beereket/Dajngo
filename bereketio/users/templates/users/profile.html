@@ -1,0 +1,79 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'users/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="profile-container">
+        <span class="profile-back">
+            <p class="profile-back-text"> MY PROFILE </p>
+        </span>
+
+        <div class="profile-info">
+            <img src="{{ user.profile.image.url }}" alt="profile-image" width="150" class="profile-image">
+
+            <div class="info-container">
+                <span class="user-name">
+                    <p>Your Name: {{ request.user|title }}</p>
+                </span>
+
+                <span class="user-email">
+                    <p>{{ user.email }}</p>
+                </span>
+
+                <span>
+
+                </span>
+
+                <button class="update-button">
+                    <a href="{% url 'users-profile-update' %}"> Update </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="other-profile-container">
+        <span class="other-profile-back">
+            <p class="other-profile-back-text"> OTHER USERS</p>
+        </span>
+        {% for other_user in users %}
+            <div class="other-profile-info">
+                <img src="{{ other_user.profile.image.url }}" alt="profile-image" width="150" class="profile-image">
+                <div class="other-info-container">
+            <span class="other-user-name">
+                <p>Name: {{ other_user.username|title }}</p>
+            </span>
+                    <span class="user-email">
+                <p>{{ other_user.email }}</p>
+            </span>
+
+                    {% if other_user.username %}
+                        {% if other_user.username in followed_usernames %}
+                            <button class="update-button">
+                                <a href="{% url 'unfollow-user' other_user.username %}">Unfollow</a>
+                            </button>
+                        {% else %}
+                            <button class="update-button">
+                                <a href="{% url 'follow-user' other_user.username %}">Follow</a>
+                            </button>
+                        {% endif %}
+                    {% else %}
+                        <p>User has no username.</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div>
+
+
+
+{% endblock %}

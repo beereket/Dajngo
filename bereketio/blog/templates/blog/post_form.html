@@ -1,0 +1,29 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block head %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="content-section" style="margin-top: 60px">
+            <form action="" method="post">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">New Post</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Post</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted"><a href="{% url 'blog-home' %}">Go Back→</a></small>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock content %}

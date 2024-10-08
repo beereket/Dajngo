@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.profile-container {
+    font-family: 'Outfit', sans-serif;
+}
+
+.update-form {
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.profile-back {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 919px;
+    height: 169px;
+    left: 316px;
+    top: 110px;
+
+    background: rgba(31, 31, 31, 0.6);
+    /*background: #F0EFFA;*/
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+}
+
+.other-profile-back {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 919px;
+    height: 169px;
+    left: 316px;
+    top: 580px;
+
+    background: rgba(31, 31, 31, 0.6);
+    /*background: #F0EFFA;*/
+    border: 1px solid #FFFFFF;
+    border-radius: 9px;
+}
+
+.other-profile-back-text {
+    color: white;
+    font-size: 14px;
+    margin: 15px;
+}
+
+.profile-back-text {
+    color: white;
+    font-size: 14px;
+    margin: 15px;
+}
+
+.profile-info {
+    /* Frame 1321314470 */
+    display: flex;
+
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    left: calc(50% - 600px / 2 + 40px);
+    top: 208px;
+
+    background: #FFFFFF;
+    border: 2px solid #EBEBEE;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+
+    z-index: 99;
+}
+
+.update-info {
+    /* Frame 1321314470 */
+    display: flex;
+
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    left: calc(50% - 600px / 2 + 40px);
+    top: 208px;
+
+    background: #FFFFFF;
+    border: 2px solid #EBEBEE;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+
+    z-index: 99;
+}
+
+.profile-image {
+    height: 150px;
+    padding: 50px;
+    border-radius: 50%;
+}
+
+.info-container {
+    width: 296px;
+    height: 200px;
+
+    margin-top: 45px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
+    border-radius: 4px;
+}
+
+.profile-inf {
+    position: relative;
+}
+
+.profile-info span {
+    display: flex;
+}
+
+.profile-info span p {
+    height: 13px;
+
+    margin-left: 13px;
+    margin-top: 10px;
+
+
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(31, 31, 31, 0.7);
+}
+
+.update-button {
+    position: absolute;
+    bottom: 15px;
+    right: 240px;
+
+
+    background: #F0EFFA;
+    border-radius: 3px;
+    border: none;
+
+
+    /* Edit */
+
+    width: 100px;
+    height: 25px;
+
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    align-items: center;
+
+    color: rgba(31, 31, 31, 0.8);
+
+}
+
+.update-button a {
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    align-items: center;
+
+    color: rgba(31, 31, 31, 0.8);
+    text-decoration: none;
+}
+
+.profile-update form{
+    padding: 30px;
+}
+
+.other-profile-container {
+    box-sizing: border-box;
+    margin-top: 500px;
+    margin-left: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.other-profile-info {
+    margin-top: 30px;
+
+    position: relative;
+    display: flex;
+
+    width: 600px;
+    height: 300px;
+
+    background: #FFFFFF;
+    border: 2px solid #EBEBEE;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+}
+.other-info-container {
+    width: 296px;
+    height: 200px;
+
+    margin-top: 45px;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
+    border-radius: 4px;
+}
+
+.other-profile-info span p {
+    height: 13px;
+
+    margin-left: 13px;
+    margin-top: 10px;
+
+
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+
+    color: rgba(31, 31, 31, 0.7);
+}
